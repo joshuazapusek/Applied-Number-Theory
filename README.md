@@ -1,2 +1,2 @@
-# Factorization-Primality
-Repo for Math 467 Factorization &amp; Primality Testing
+# Applied Number Theory in Haskell
+Repo for factorization and primality testing course

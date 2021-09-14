@@ -77,17 +77,20 @@ int * extendEuclid(int a, int b) {
     int t = 1;
     // Quotient of a % b
     int q = 0;
-    int temp = 0;
+    int temp, temp_t, temp_s;
     // Main iterative
     while (b != 0) {
         q = a / b;
         temp = b;
         b = a % b;
         a = temp;
+        // m & n
+        temp_s = s;
+        temp_t = t; 
         t = t_prev - q * t;
         s = s_prev - q * s;
-        t_prev = t;
-        s_prev = s;
+        s_prev = temp_s;
+        t_prev = temp_t;
     }
     arr[0] = a;
     arr[1] = s_prev;
